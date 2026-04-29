@@ -25,6 +25,7 @@ export default function App() {
 
   useEffect(() => {
     const handleVisibility = () => {
+      
       if (document.hidden) {
         if (isAudioPlaying && audioRef.current) {
           audioRef.current.pause();
@@ -74,7 +75,7 @@ export default function App() {
 
       <div id="main-content" className={hasEntered ? "visible fade-in" : ""}>
         <Hero preload={preloadRest} />
-        <CountdownSection />
+        <CountdownSection />  
         <MemoriesSection preload={preloadRest} />
         <VenueSection />
         <EventsSection preload={preloadRest} />
